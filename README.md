@@ -5,10 +5,14 @@ This lib does not uses regex. it automatically handles punctuation marks like ".
 
 ```javascript
 
+const extractMentions = require('/path/to/extractMentions.js');
+
 let str = `
 
-  hello @name, welcome to @delhi! // [{name: "name", index: 6}, {name: "delhi", index: 24}]
+  hello @name, welcome to @delhi!
   
 `;
+
+console.log(extractMentions(str)); // returns [{name: "name", index: 6}, {name: "delhi", index: 24}]
 
 ```
