@@ -1,0 +1,1 @@
+const isValidChar=a=>{const b=a.charCodeAt(0);return!!(47<b&&58>b||64<b&&91>b||96<b&&123>b)};module.exports=a=>{const b=[];for(let c=a.split(""),d=0,e=!1,f="",g=null;d<c.length;){"@"===c[d]&&(e=!0,g=d,d++);const a=c[d];!a||isValidChar(a)||"_"===a||(e=!1),e?f+=a:(f.length&&b.push({name:f,index:g}),f="",g=null),d++}return b};
